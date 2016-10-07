@@ -38,8 +38,8 @@ class MindbodyClient extends \SoapClient {
 
 	public static function userCredentials($username, $password, Array $siteids = null) {
 		$credentials = new structures\UserCredentials;
-		$credentials->Username = getenv('MBO_API_USER_STAFF'); //$username;
-		$credentials->Password = getenv('MBO_API_PASS'); //$password;
+		$credentials->Username = $username;
+		$credentials->Password = $password;
 		$credentials->SiteIDs = $siteids;
 
 		return $credentials;
